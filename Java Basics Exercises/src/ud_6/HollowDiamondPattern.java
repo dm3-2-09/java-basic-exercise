@@ -14,12 +14,30 @@ import java.util.Scanner;
 public class HollowDiamondPattern {
     
     public static void main(String[] args) {
-        int n;
+        int rows;
         Scanner sc = new Scanner(System.in);
         
         System.out.println("Enter the number of rows");
-        n = sc.nextInt();
-        
+        rows = sc.nextInt();
+        for (int i=1; i<= rows ; i++) { for (int j = rows; j > i ; j--) {
+            System.out.print(" ");
+        }
+        System.out.print("*");
+        for (int k = 1; k < 2*(i -1) ;k++) { System.out.print(" "); } if( i==1) { System.out.println(""); } else { System.out.println("*"); } } for (int i=rows-1; i>= 1 ; i--)
+        {
+        for (int j = rows; j > i ; j--) {
+            System.out.print(" ");
+        }
+        System.out.print("*");
+        for (int k = 1; k < 2*(i -1) ;k++) {
+            System.out.print(" ");
+        }
+        if( i==1)
+            System.out.println("");
+        else
+            System.out.println("*");
+    }
+    sc.close();
     }
     
 }
