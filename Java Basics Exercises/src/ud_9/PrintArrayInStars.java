@@ -3,7 +3,7 @@ package ud_9;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class PrintArray {
+public class PrintArrayInStars {
 
     public static void main(String[] args) {
         int n;
@@ -14,7 +14,10 @@ public class PrintArray {
         System.out.println("Enter the value for all the items: ");
 
         for (int i = 0; i < n; ++i) {  // Read all items
-            a[i] = sc.nextInt();
+            int z = a[i] = sc.nextInt();
+            for (int j = 0;j<z;j++) {
+                System.out.print("*");
+            }
         }
         System.out.print("Entered array is: " + Arrays.toString(a));
     }
